@@ -17,6 +17,8 @@
   ******************************************************************************
   */
 /* This is for Part-3 of Lab-02, ECEN-361
+ * Student to only change parts between the comment blocks:
+	  ***** STUDENT TO FILL IN START
  *
  */
 
@@ -31,15 +33,13 @@ extern void MX_TIM3_Init(void);	// To reset the timer
 extern bool got_start_button;
 extern bool got_stop_button;
 extern bool got_fastest_button;
-extern best_reaction_time_in_millisec;
+extern int best_reaction_time_in_millisec;
 
 
 // Globals
 #define upper_limit_millisec_to_wait  5000;  //Give the user up to 7 seconds to wonder
 
 int rand_millisec;
-int ended_absolute;
-int started_absolute;
 int last_reaction_time_in_millisec = 0;
 bool started_doing_reaction_timers = false;
 
@@ -65,17 +65,13 @@ void got_start()
 		started_doing_reaction_timers = true;
 	    Clear_LEDs();
 		rand_millisec =  rand() % upper_limit_millisec_to_wait;
+
+	  /**************** STUDENT TO FILL IN START HERE ********************/
 		// Step 1
-		Display_Waiting();
 		// Step 2
-		HAL_Delay(rand_millisec);  // this is how long before the counter on the 7-Seg display
 		// Step 3
-		Display_All();
-		got_start_button = false;
 		// Step 4
-		HAL_TIM_Base_Start_IT(&htim3);  // LED SevenSeg cycle thru them
-		started_absolute = uwTick;
-		printf("Started the reaction timer at absolute time: %d\n\r", started_absolute);
+	  /**************** STUDENT TO FILL IN END  HERE ********************/
 	}
 void got_stop()
 {
@@ -86,18 +82,23 @@ void got_stop()
 		 3.) Display the value
 		 */
 		// 1.) Stop the timer
-		got_stop_button=false;
-		ended_absolute = uwTick;
-		HAL_TIM_Base_Stop_IT(&htim3);  // LED SevenSeg cycle thru them
-		last_reaction_time_in_millisec = __HAL_TIM_GetCounter(&htim3) / 10;   // The timer is set to divide 80Mhz by 800 = 10,000 mS ticks
 
-		MultiFunctionShield_Display(last_reaction_time_in_millisec);
+
+	  /**************** STUDENT TO FILL IN START HERE ********************/
+      // 1.) Stop the random timer // Random timer is timer3
+
+      // 2.) Read the value of the timer -- this step provided
+		last_reaction_time_in_millisec = __HAL_TIM_GetCounter(&htim3) / 10; // Why is it divide by 10?
+
+	  // 3.) Display the value
+
+
+      /**************** STUDENT TO FILL IN END HERE ********************/
+		// Keep the best time in a global variable
 		if (last_reaction_time_in_millisec < best_reaction_time_in_millisec) best_reaction_time_in_millisec = last_reaction_time_in_millisec;
+		// Show some stats
 		printf("Random Delay was: %d\n\r", rand_millisec );
-		printf("Got the stop button at absolute time: %d\n\r", ended_absolute);
 		printf("Reaction Time from Timer   : %d\n\r", last_reaction_time_in_millisec);
-		printf("Reaction Time absolute diff: %d\n\r", (int) (ended_absolute - started_absolute));
-		printf("Absolute started: %d, ended: %d, diff: %d\n\r", started_absolute,ended_absolute, (ended_absolute - started_absolute));
 		// Just to keep things random -- reseed with the last reaction time
 	    srand((unsigned) last_reaction_time_in_millisec );
 }
