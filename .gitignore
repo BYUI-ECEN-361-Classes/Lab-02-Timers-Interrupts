@@ -59,3 +59,4 @@ dkms.conf
 *.o
 *.o
 Debug/makefile
+*.cyclo
