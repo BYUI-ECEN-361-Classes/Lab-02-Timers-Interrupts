@@ -6,6 +6,7 @@
 *.ko
 *.obj
 *.elf
+*.cyclo
 
 # Linker output
 *.ilk
@@ -51,12 +52,19 @@ Module.symvers
 Mkfile.old
 dkms.conf
 .settings/language.settings.xml
-.settings/language.settings.xml
-.settings/language.settings.xml
 *.o
 *.elf
 *.list
 *.o
 *.o
 Debug/makefile
-*.cyclo
+/Release/
+Debug/Core/Src/main.cyclo
+*.o
+*.su
+*.elf
+*.list
+*.map
+
+.settings/**
+Debug/**

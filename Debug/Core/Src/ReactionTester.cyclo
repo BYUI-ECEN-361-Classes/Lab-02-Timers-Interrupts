@@ -1,4 +1,0 @@
-../Core/Src/ReactionTester.c:46:6:show_a_random_number	2
-../Core/Src/ReactionTester.c:56:6:got_start	1
-../Core/Src/ReactionTester.c:76:6:got_stop	2
-../Core/Src/ReactionTester.c:107:6:got_fastest	1
