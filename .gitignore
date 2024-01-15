@@ -69,3 +69,4 @@ Debug/Core/Src/main.cyclo
 .settings/**
 Debug/**
 Documentation/~$EN-361-Lab-02--STM32 Clocks, Timers, and Interrupts.docx
+/Debug/

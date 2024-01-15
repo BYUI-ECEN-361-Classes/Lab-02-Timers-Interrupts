@@ -150,6 +150,7 @@ int main(void)
 	  got_start();
 	  while (!got_stop_button);
 	  got_stop();
+	  got_stop_button = false;
 	  MX_TIM3_Init();   // reset the reaction timer
 	// Display_Waiting();
 
