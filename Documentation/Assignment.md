@@ -1,8 +1,6 @@
 # ECEN-361 Lab-02: Clocks, Timers, and Interrupts
 
-<div style="text-align: right"> 
-Student Name:  Fill-in HERE
-</div>
+     Student Name:  Fill-in HERE
 
 ## Introduction and Objective of the Lab
 
