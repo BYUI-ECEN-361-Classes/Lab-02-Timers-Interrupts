@@ -37,7 +37,7 @@ extern int best_reaction_time_in_millisec;
 
 
 // Globals
-#define upper_limit_millisec_to_wait  5000;  //Give the user up to 7 seconds to wonder
+#define upper_limit_millisec_to_wait  7000;  //Give the user up to 7 seconds to wonder
 
 int rand_millisec;
 int last_reaction_time_in_millisec = 0;

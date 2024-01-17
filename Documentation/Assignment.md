@@ -57,6 +57,17 @@ Note that a few things have to happen to make a timer-based interrupt work:
    
    **HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef \*htim)**
 
+**Safety tip:**
+Note that with the GUI-generated source-codes, anything the USER (you) change that is NOT between the comment sections indicators:
+
+```c
+    /* USER CODE BEGIN x*/
+    /* USER CODE END   x */
+```
+can be **ERASED**.
+
+Any modifications you make should *ALWAYS* between these section headers.
+
 ## Part 1 Questions (2 pts)
 
 Note the speed of D1/D2/D3 – they should seem like a 3-bit binary counter.
@@ -84,7 +95,7 @@ Change the clock tree to adjust the rates at which the LEDs blink.
 
 2. What is the new frequency of LED D1? [*answer here*]
 
-3. Why didn’t the Seven-Segment Light update rate change? [*answer here*]
+3. When we changed the frequency, did the Seven-Segment Light update rate change?  (hint, look at the clocks driving the APB1, APB2 buses and which timers are on which bus.  Recall that the Seven-Segment timer is Tim17) [*answer here*]
 
 ## Part 3: Reaction Timer (5 pts)
 

@@ -148,6 +148,7 @@ int main(void)
 	// show_a_random_number();
 	  while (!got_start_button);
 	  got_start();
+	  got_start_button = false;
 	  while (!got_stop_button);
 	  got_stop();
 	  got_stop_button = false;
