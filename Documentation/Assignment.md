@@ -1,5 +1,5 @@
 # ECEN-361 Lab-02: Clocks, Timers, and Interrupts
-
+### Fall-2024
      Student Name:  Fill-in HERE
 
 ## Introduction and Objective of the Lab
