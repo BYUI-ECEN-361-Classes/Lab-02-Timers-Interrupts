@@ -5,8 +5,9 @@
 *.o
 *.ko
 *.obj
-*.elf
 *.cyclo
+.idea*
+.idea/*
 
 # Linker output
 *.ilk
@@ -53,7 +54,6 @@ Mkfile.old
 dkms.conf
 .settings/language.settings.xml
 *.o
-*.elf
 *.list
 *.o
 *.o
@@ -62,7 +62,6 @@ Debug/makefile
 Debug/Core/Src/main.cyclo
 *.o
 *.su
-*.elf
 *.list
 *.map
 
