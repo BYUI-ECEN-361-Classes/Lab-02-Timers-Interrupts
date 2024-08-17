@@ -1,5 +1,5 @@
 # ECEN-361 Lab-02: Clocks, Timers, and Interrupts
-
+### Fall-2024
      Student Name:  Fill-in HERE
 
 ## Introduction and Objective of the Lab
@@ -125,7 +125,7 @@ Read thru the comments in the code. Most of the structure is in place, and you s
 
 Note that for the reaction timer to be accurate, because you changed the prescaler above in Part2, you’ll need to reset it back to the default of no-prescale, x1. 
 
-## Extra-Credit (5pts maximum)
+## Ideas for Credit to get to 'A' & Extra-Credit (2 pts for any)
 
 * In the current code, there’s no penalty for “Cheating” by pushing the stop button before all the “Go” lights turn on.  Implement some sort of indicator that the
   Stop button was pushed prematurely.
