@@ -60,7 +60,7 @@ void got_start()
 		 1.) Display the Waiting "----"
 		 2.) Wait for a random number of millisec's
 		 3.) Turn on all the 7-Seg lights (that's "GO"
-		 4.) Start the Reaction timer.
+		 4.) Start the Reaction timer. (Hint: Use the same function you used to start the other timers)
 		*/
 		started_doing_reaction_timers = true;
 	    Clear_LEDs();
@@ -77,7 +77,7 @@ void got_stop()
 {
 		/* Here's the code for the STOP button --
 		 * When pushed:
-		 1.) Stop the random timer
+		 1.) Stop the random timer (Hint: There is a similar function to the one you used to start the timer)
 		 2.) Read the value of timer
 		 3.) Display the value
 		 */
