@@ -133,7 +133,7 @@ For Seven Segment Display Functions, check the MultiFunctionShield.h header file
 * In the current code, there's no penalty for “Cheating” by pushing the stop button before all the “Go” lights turn on.  Implement some sort of indicator that the
   Stop button was pushed prematurely.
 
-* Change the “Go” lights to be all of the D1..4 LEDs instead of display all '8888' on the SevenSegments.
+* Change the “Go” lights to be all of the D1..4 LEDs instead of displaying '8888' on the SevenSegments.
 
 * Make the final reaction time flash on/off
 
